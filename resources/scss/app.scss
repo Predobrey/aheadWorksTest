@@ -1,0 +1,39 @@
+// BLOCK CONNECTIONS
+@import "_variable";
+@import "_fonts";
+@import '_home.scss';
+@import '_tickets.scss';
+
+// GLOBAL CLASS
+* {
+    margin: 0;
+    padding: 0;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 150px;
+    max-width: 1920px;
+    @media (max-width: 1440px) {
+        padding: 0 75px;
+    }
+    @media (max-width: $media_desctop) {
+        padding: 0 30px;
+    }
+    @media (max-width: $media_pad) {
+        padding: 0 15px;
+    }
+}
+
+.alert{
+    &__error{
+        width: auto;
+        color: red;
+        margin: 5px 0 0 0;
+
+    }
+}

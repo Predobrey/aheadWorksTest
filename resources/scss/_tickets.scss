@@ -1,0 +1,54 @@
+.tickets{
+    margin: 50px 0 0 0;
+    &__welcome{
+        display: flex;
+        justify-content: space-between;
+        & > .exit{
+            & button{
+                background: #2F80ED;
+                border: 1px solid #2F80ED;
+                //width: 100px;
+                height: 30px;
+                padding: 0 20px;
+                border-radius: 10px;
+                color: white;
+                &:hover{
+                    background: none;
+                    color: black;
+                    transition: all 1s ease;
+                }
+
+            }
+        }
+    }
+    &__reactForm{
+        & form{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            & input{
+                margin: 15px 10px 0 0;
+                height: 44px;
+                padding-left: 24px;
+                border: 2px solid black;
+                &:focus {
+                    background: #73AEFF;
+                    color: white;
+
+                    &::placeholder {
+                        color: white;
+                    }
+                }
+            }
+            & button{
+                margin: 15px 0 0 0;
+            }
+        }
+    }
+    &__allPost{
+        margin: 15px 0 0 0;
+       & ul {
+           list-style: none;
+       }
+    }
+}

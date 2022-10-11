@@ -1,0 +1,90 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    &__wrapper {
+        text-align: center;
+    }
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    & h4 {
+        text-align: center;
+    }
+
+    & input, & button {
+        margin: 25px 0 0 0;
+    }
+
+    & input {
+        height: 44px;
+        padding-left: 24px;
+        border: 2px solid black;
+
+        &:focus {
+            background: #73AEFF;
+            color: white;
+
+            &::placeholder {
+                color: white;
+            }
+        }
+    }
+
+    &__button {
+        height: 48px;
+        padding: 0 48px;
+        text-shadow: 0 .5px 1px rgba(0, 0, 0, .15);
+        outline: 0;
+        border: 2px solid #2F80ED;
+        background: #2F80ED;
+        color: white;
+        @include fonts_theme($OpenSans, 400, 18px, 26px);
+        &:hover {
+            transition: all 1s ease;
+            border: 2px solid #2F80ED;
+            background-color: white;
+            color: black;
+        }
+    }
+
+    & form {
+        display: grid;
+        grid-template-columns: auto;
+
+        & > .button {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    & .back {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0 0 0;
+        color: gray;
+        text-decoration: none;
+
+        &:hover {
+            & > div {
+                transform: translateX(20px);
+                transition: all 1s ease;
+            }
+        }
+
+        & > div {
+            background: url("../img/arrow-right.svg") no-repeat;
+            width: 40px;
+            height: 20px;
+            background-size: 40px 20px;
+        }
+    }
+}

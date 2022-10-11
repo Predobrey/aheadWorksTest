@@ -1,0 +1,38 @@
+@font-face {
+    font-family: "OpenSans";
+    font-display: swap;
+    src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin fonts_theme($family, $weight, $size, $height) {
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    font-style: normal;
+}
+
+@mixin fonts_media($screen,$size,$height) {
+    @media (max-width: $screen) {
+        font-size: $size;
+        line-height: $height;
+    }
+}
+
+// GLOBAL CLASS
+h1 {
+    @include fonts_theme($OpenSans, 700, 64px, 78px);
+}
+
+h4 {
+    @include fonts_theme($OpenSans, 700, 32px, 39px);
+    @include fonts_media($media_pad, 18px, 26px);
+}
+
+a {
+    color: gray;
+    text-decoration: none;
+    color: #2F80ED;
+}
