@@ -7,7 +7,7 @@ import Welcome from "./Page/components/Welcome";
 export default function App() {
     let [array, setArray] = useState([]);
     const {
-        register,reset, formState: {
+        register, reset, formState: {
             errors,
         }, handleSubmit
     } = useForm();
@@ -60,9 +60,9 @@ export default function App() {
 
     function getReqRes() {
         axios.post('https://reqres.in/api/register', {
-                "email": "eve.holt@reqres.in",
-                "password": "pistol"
-            })
+            "email": "eve.holt@reqres.in",
+            "password": "pistol"
+        })
             .then(response => console.log(response.data));
     }
 
