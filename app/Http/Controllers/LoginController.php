@@ -35,10 +35,7 @@ class LoginController extends Controller
             $post = User::find($userId);
             $post->remember_token = bin2hex(random_bytes(10));
             $post->save();
-//            $affectedRecords = User::where("id", $userId)->update(['remember_token'=>'UPDATE']);
-
             $cookie = cookie('Authorization', $post->remember_token, 50);
-//            return redirect()->intended(route('user.private'));
             return redirect()->intended(route('user.private'))->cookie($cookie);
         }
 
