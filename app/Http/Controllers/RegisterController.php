@@ -36,7 +36,7 @@ class RegisterController extends Controller
         }
 
         return redirect(route('user.login'))->withErrors([
-        'formErrors'=> 'Произошла ошибка при сохранении пользователя'
+        'formErrors'=> 'An error occurred while saving the user'
         ]);
     }
 }
